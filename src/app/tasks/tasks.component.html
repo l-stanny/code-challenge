@@ -1,0 +1,42 @@
+<div class="main_container">
+  <main>
+    <h2>Todo List</h2>
+    <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
+      <fieldset>
+        <label for="productName">Enter a task. </label>
+        <br /><br />
+        <span *ngIf="myForm.submitted && myForm.valid"
+          ><span
+            class="fielderror"
+            *ngFor="let productName of productNames; let i = index"
+            >{{ productName }}
+            <button
+              type="button"
+              class="delete-button"
+              (mousedown)="deletetask($event)"
+            >
+              X</button
+            ><br /><br /></span
+        ></span>
+        <span class="fielderror" *ngIf="showMessage">
+          Product name is required.</span
+        >
+        <input
+          type="text"
+          [(ngModel)]="productName"
+          id="productName"
+          name="productName"
+          required
+        />
+      </fieldset>
+      <div
+        class="fielderror forminvalid"
+        *ngIf="myForm.submitted && myForm.invalid"
+      >
+        This form entry is invalid.
+      </div>
+      <button type="submit" class="submitBtn">Submit</button
+      ><!-- [disabled]="myForm.invalid" -->
+    </form>
+  </main>
+</div>
