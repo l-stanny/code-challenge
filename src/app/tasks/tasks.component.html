@@ -1,25 +1,32 @@
 <div class="main_container">
   <main>
     <h2>Todo List</h2>
+    <div
+      *ngIf="myForm.submitted && myForm.valid"
+      role="menu"
+      aria-live="assertive"
+      aria-relevant="all"
+    >
+      <span
+        class="fielderror"
+        role="menuitem"
+        *ngFor="let productName of productNames; let i = index"
+        >{{ productName }}
+        <button
+          type="button"
+          class="delete-button"
+          aria-label="delete this task"
+          (mousedown)="deletetask($event)"
+        >
+          X
+        </button>
+      </span>
+    </div>
     <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
       <fieldset>
         <label for="productName">Enter a task. </label>
-        <br /><br />
-        <span *ngIf="myForm.submitted && myForm.valid"
-          ><span
-            class="fielderror"
-            *ngFor="let productName of productNames; let i = index"
-            >{{ productName }}
-            <button
-              type="button"
-              class="delete-button"
-              (mousedown)="deletetask($event)"
-            >
-              X</button
-            ><br /><br /></span
-        ></span>
         <span class="fielderror" *ngIf="showMessage">
-          Product name is required.</span
+          Task name is required.</span
         >
         <input
           type="text"
