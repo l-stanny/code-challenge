@@ -1,13 +1,5 @@
 import { Component, OnInit, ElementRef, Renderer2 } from '@angular/core';
-import { Title } from '@angular/platform-browser';
-import {
-  FormGroup,
-  Validators,
-  FormControl,
-  FormBuilder,
-  ReactiveFormsModule,
-  FormsModule,
-} from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -34,14 +26,12 @@ export class TasksComponent implements OnInit {
       this.showMessage = false;
     }
     this.productNames.push(this.productName);
-    console.log('You submitted values:', form);
   }
 
   deletetask(event: any): void {
     const clickedButton = event.target as HTMLElement;
     const parentElement = clickedButton.parentNode as HTMLElement;
     if (parentElement) {
-      console.log(parentElement);
       this.renderer.removeChild(parentElement.parentNode, parentElement);
     }
   }
