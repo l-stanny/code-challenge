@@ -1,0 +1,54 @@
+<div class="main_container">
+  <main>
+    <h2>Todo List</h2>
+    @if (myForm.submitted && myForm.valid) {
+      <div
+        role="menu"
+        aria-live="assertive"
+        aria-relevant="all"
+        >
+        @for (productName of productNames; track productName; let i = $index) {
+          <span
+            class="fielderror"
+            role="menuitem"
+            >{{ productName }}
+            <button
+              type="button"
+              class="delete-button"
+              aria-label="delete this task"
+              (mousedown)="deletetask($event)"
+              >
+              X
+            </button>
+          </span>
+        }
+      </div>
+    }
+    <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
+      <fieldset>
+        <label for="productName">Enter a task. </label>
+        @if (showMessage) {
+          <span class="fielderror">
+            Task name is required.</span
+            >
+          }
+          <input
+            type="text"
+            [(ngModel)]="productName"
+            id="productName"
+            name="productName"
+            required
+            />
+        </fieldset>
+        @if (myForm.submitted && myForm.invalid) {
+          <div
+            class="fielderror forminvalid"
+            >
+            This form entry is invalid.
+          </div>
+        }
+        <button type="submit" class="submitBtn">Submit</button
+          ><!-- [disabled]="myForm.invalid" -->
+        </form>
+      </main>
+    </div>
