@@ -1,12 +1,12 @@
 import { Component, OnInit, ElementRef, Renderer2 } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'tasks',
   templateUrl: './tasks.component.html',
   styleUrls: ['./tasks.component.scss'],
-  imports: [ReactiveFormsModule, FormsModule, CommonModule],
+  imports: [ReactiveFormsModule, FormsModule],
 })
 export class TasksComponent implements OnInit {
   productName: string;
