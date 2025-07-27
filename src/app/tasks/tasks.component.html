@@ -3,7 +3,7 @@
     <h2>Todo List</h2>
     @if (myForm.submitted && myForm.valid) {
     <div role="menu" aria-live="assertive" aria-relevant="all">
-      @for (taskName of taskNames; track taskName; let i = $index) {
+      @for (taskName of taskNames; track $index; let i = $index) {
       <span class="fielderror" role="menuitem"
         >{{ taskName }}
         <button
