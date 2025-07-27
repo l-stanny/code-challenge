@@ -1,7 +1,6 @@
 import { Component, OnInit, ElementRef, Renderer2 } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
-
 @Component({
   selector: 'tasks',
   templateUrl: './tasks.component.html',
@@ -9,23 +8,23 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
   imports: [ReactiveFormsModule, FormsModule],
 })
 export class TasksComponent implements OnInit {
-  productName: string;
+  taskName: string;
   showMessage!: boolean;
-  productNames: string[] = [];
+  taskNames: string[] = [];
 
   constructor(private el: ElementRef, private renderer: Renderer2) {
-    this.productName = 'Cool Jacket';
+    this.taskName = 'My task';
   }
 
   ngOnInit(): void {}
 
   onSubmit(form: any): void {
-    if (form.productName === '') {
+    if (form.taskName === '') {
       this.showMessage = true;
     } else {
       this.showMessage = false;
     }
-    this.productNames.push(this.productName);
+    this.taskNames.push(this.taskName);
   }
 
   deletetask(event: any): void {

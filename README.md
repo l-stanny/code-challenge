@@ -1,6 +1,6 @@
 # CodeChallenge
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3. Users can add and delete items in a task list.
 
 ## Development server
 
