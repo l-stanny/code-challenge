@@ -40,7 +40,7 @@ fieldset {
 .fielderror {
   margin: 0 auto;
   margin-top: 0.5em;
-  width: 18.75em;
+  width: 17.25em;
   display: block;
 }
 input {
@@ -83,7 +83,6 @@ button {
   display: block;
   font-weight: 400;
   padding: 0.625em;
-  padding-bottom: 0.5em;
   text-align: center;
   cursor: pointer;
   -webkit-user-select: none;
@@ -101,6 +100,7 @@ button {
   margin: 0 auto;
   margin-top: 1em;
   margin-bottom: 1em;
+  background-color: #333;
 }
 button.delete-button {
   display: inline-block;
@@ -109,6 +109,7 @@ button.delete-button {
   padding-right: 1em;
   margin-left: 1em;
   margin-bottom: 0.1em;
+  background-color: transparent;
 }
 input[type="text"] {
   border-radius: 0;
