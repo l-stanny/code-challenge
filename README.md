@@ -1,6 +1,6 @@
 # CodeChallenge
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3. Users can add and delete items in a task list.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3. Users can add and delete items in a task list. This Angular to-do list, completed as a coding challenge as part of a job interview, showcases accessibility features, the conditional control flow syntax, a modern, block-based template feature that conditionally renders content based on a boolean expression, replacing older \*ngIf directives for cleaner, more performant, and readable template logic with built-in @else if and @else support, and use of ElementRef, Renderer2, and ReactiveFormsModule.
 
 ## Development server
 
