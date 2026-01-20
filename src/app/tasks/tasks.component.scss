@@ -20,8 +20,8 @@ h1 {
   font-size: 1.5em;
   color: #fef4e9;
   font-weight: 100;
-  line-height: 86px;
-  height: 56px;
+  line-height: 5.375em;
+  height: 3.5em;
 }
 label {
   display: block;
@@ -30,17 +30,17 @@ label {
 .main_container {
   background-color: #333;
   width: 90%;
-  min-height: 470px;
-  padding-bottom: 50px;
+  min-height: 29.375em;
+  padding-bottom: 53.125em;
 }
 fieldset {
-  width: 276px;
+  width: 17.25em;
   margin: 0 auto;
 }
 .fielderror {
   margin: 0 auto;
   margin-top: 0.5em;
-  width: 300px;
+  width: 18.75em;
   display: block;
 }
 input {
@@ -48,17 +48,13 @@ input {
   font-size: 0.9em;
   color: #666;
   margin-top: 0.8em;
-  height: 40px;
-  width: 276px;
+  height: 2.5em;
+  width: 17.25em;
   border: 0;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   letter-spacing: 0.04em;
   font-weight: 100;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
   border-radius: 1px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
 }
 input[placeholder],
 :-ms-input-placeholder,
@@ -86,8 +82,8 @@ h2 {
 button {
   display: block;
   font-weight: 400;
-  padding: 10px;
-  padding-bottom: 8px;
+  padding: 0.625em;
+  padding-bottom: 0.5em;
   text-align: center;
   cursor: pointer;
   -webkit-user-select: none;
